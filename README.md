@@ -10,7 +10,7 @@ Backend developer
 Hi, I'm a backend developer. I completed an internship as a backend developer, where I learned a lot and gained valuable experience. I also worked for a company specializing in WordPress websites, where I developed skills in SEO, security, and maintenance. My final project was an Augmented Reality application using AR Foundation for my school's museum, which allowed me to apply my skills creatively. I'm excited to share my projects and collaborate on new initiatives!
 
 * 🌍  I'm based in Santander, Cantabria, Spain
-* ✉️  You can contact me at [cristian.arhire18@gmail.com](mailto:cristian.arhire18@gmail.com)
+* ✉️  You can contact me at [cristian@arhire.dev](mailto:cristian@arhire.dev)
 * 🧠  I'm learning Python and Cibersecurity
 
 ### Skills
