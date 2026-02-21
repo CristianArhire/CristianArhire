@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 400">
+  <defs>
+    <!-- Grain texture -->
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply" result="grain"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.08"/>
+      </feComponentTransfer>
+    </filter>
+    <!-- Ambient glow left -->
+    <radialGradient id="glowLeft" cx="20%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#e09f3e" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Ambient glow right -->
+    <radialGradient id="glowRight" cx="85%" cy="40%" r="25%">
+      <stop offset="0%" stop-color="#c17f2a" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Text gradient -->
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="40%" stop-color="#e09f3e"/>
+      <stop offset="70%" stop-color="#c8a455"/>
+      <stop offset="100%" stop-color="#f5f0e8"/>
+    </linearGradient>
+    <!-- Accent line gradient -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="20%" stop-color="#e09f3e"/>
+      <stop offset="80%" stop-color="#c17f2a"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+    <!-- Dot pattern -->
+    <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.7" fill="#e09f3e" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1500" height="400" fill="#0c0a09"/>
+
+  <!-- Dot pattern overlay -->
+  <rect width="1500" height="400" fill="url(#dots)"/>
+
+  <!-- Ambient glows -->
+  <rect width="1500" height="400" fill="url(#glowLeft)"/>
+  <rect width="1500" height="400" fill="url(#glowRight)"/>
+
+  <!-- Decorative grid lines -->
+  <line x1="100" y1="0" x2="100" y2="400" stroke="#e09f3e" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="300" y1="0" x2="300" y2="400" stroke="#e09f3e" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1200" y1="0" x2="1200" y2="400" stroke="#e09f3e" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1400" y1="0" x2="1400" y2="400" stroke="#e09f3e" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="100" x2="1500" y2="100" stroke="#e09f3e" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="300" x2="1500" y2="300" stroke="#e09f3e" stroke-opacity="0.03" stroke-width="1"/>
+
+  <!-- Corner decorations -->
+  <path d="M 40,30 L 40,50 M 40,30 L 60,30" stroke="#e09f3e" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M 1460,370 L 1460,350 M 1460,370 L 1440,370" stroke="#e09f3e" stroke-width="1.5" fill="none" opacity="0.3"/>
+
+  <!-- Code decoration left side -->
+  <text x="60" y="155" fill="#e09f3e" opacity="0.12" font-family="monospace" font-size="13">const developer = {</text>
+  <text x="60" y="175" fill="#e09f3e" opacity="0.12" font-family="monospace" font-size="13">  name: "Cristian",</text>
+  <text x="60" y="195" fill="#e09f3e" opacity="0.12" font-family="monospace" font-size="13">  focus: "backend",</text>
+  <text x="60" y="215" fill="#e09f3e" opacity="0.12" font-family="monospace" font-size="13">  stack: [".NET", "Python"],</text>
+  <text x="60" y="235" fill="#e09f3e" opacity="0.12" font-family="monospace" font-size="13">  learning: true,</text>
+  <text x="60" y="255" fill="#e09f3e" opacity="0.12" font-family="monospace" font-size="13">};</text>
+
+  <!-- Horizontal accent line above name -->
+  <rect x="450" y="140" width="200" height="1.5" fill="url(#lineGrad)" rx="1"/>
+
+  <!-- Main content -->
+  <text x="750" y="178" text-anchor="middle" fill="url(#nameGrad)" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="-2">Cristian Arhire</text>
+
+  <!-- Accent line below name -->
+  <rect x="625" y="198" width="250" height="1.5" fill="url(#lineGrad)" rx="1"/>
+
+  <!-- Role -->
+  <text x="750" y="232" text-anchor="middle" fill="#a8a29e" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" letter-spacing="4">SOFTWARE DEVELOPER</text>
+
+  <!-- Tech tags - Row 1: Languages -->
+  <g opacity="0.55">
+    <!-- Row 1 -->
+    <rect x="455" y="260" width="55" height="24" rx="4" fill="#e09f3e" fill-opacity="0.08" stroke="#e09f3e" stroke-width="0.8" opacity="0.5"/>
+    <text x="482" y="276" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="11">C#</text>
+
+    <rect x="520" y="260" width="65" height="24" rx="4" fill="#e09f3e" fill-opacity="0.08" stroke="#e09f3e" stroke-width="0.8" opacity="0.5"/>
+    <text x="552" y="276" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="11">.NET</text>
+
+    <rect x="595" y="260" width="75" height="24" rx="4" fill="#e09f3e" fill-opacity="0.08" stroke="#e09f3e" stroke-width="0.8" opacity="0.5"/>
+    <text x="632" y="276" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="11">Python</text>
+
+    <rect x="680" y="260" width="60" height="24" rx="4" fill="#e09f3e" fill-opacity="0.08" stroke="#e09f3e" stroke-width="0.8" opacity="0.5"/>
+    <text x="710" y="276" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="11">Java</text>
+
+    <rect x="750" y="260" width="55" height="24" rx="4" fill="#e09f3e" fill-opacity="0.08" stroke="#e09f3e" stroke-width="0.8" opacity="0.5"/>
+    <text x="777" y="276" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="11">JS</text>
+
+    <rect x="815" y="260" width="72" height="24" rx="4" fill="#e09f3e" fill-opacity="0.08" stroke="#e09f3e" stroke-width="0.8" opacity="0.5"/>
+    <text x="851" y="276" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="11">Pascal</text>
+
+    <rect x="897" y="260" width="75" height="24" rx="4" fill="#e09f3e" fill-opacity="0.08" stroke="#e09f3e" stroke-width="0.8" opacity="0.5"/>
+    <text x="934" y="276" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="11">React</text>
+
+    <!-- Row 2 -->
+    <rect x="468" y="294" width="95" height="24" rx="4" fill="#e09f3e" fill-opacity="0.05" stroke="#e09f3e" stroke-width="0.6" opacity="0.4"/>
+    <text x="515" y="310" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="10">SQL Server</text>
+
+    <rect x="573" y="294" width="95" height="24" rx="4" fill="#e09f3e" fill-opacity="0.05" stroke="#e09f3e" stroke-width="0.6" opacity="0.4"/>
+    <text x="620" y="310" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="10">PostgreSQL</text>
+
+    <rect x="678" y="294" width="72" height="24" rx="4" fill="#e09f3e" fill-opacity="0.05" stroke="#e09f3e" stroke-width="0.6" opacity="0.4"/>
+    <text x="714" y="310" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="10">Docker</text>
+
+    <rect x="760" y="294" width="55" height="24" rx="4" fill="#e09f3e" fill-opacity="0.05" stroke="#e09f3e" stroke-width="0.6" opacity="0.4"/>
+    <text x="787" y="310" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="10">Git</text>
+
+    <rect x="825" y="294" width="65" height="24" rx="4" fill="#e09f3e" fill-opacity="0.05" stroke="#e09f3e" stroke-width="0.6" opacity="0.4"/>
+    <text x="857" y="310" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="10">Linux</text>
+
+    <rect x="900" y="294" width="92" height="24" rx="4" fill="#e09f3e" fill-opacity="0.05" stroke="#e09f3e" stroke-width="0.6" opacity="0.4"/>
+    <text x="946" y="310" text-anchor="middle" fill="#e09f3e" font-family="monospace" font-size="10">WordPress</text>
+  </g>
+
+  <!-- Grain overlay -->
+  <rect width="1500" height="400" filter="url(#grain)" opacity="0.5"/>
+</svg>
