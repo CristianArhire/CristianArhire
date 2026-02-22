@@ -16,7 +16,6 @@ var developer = new Developer
 ### Currently
 
 - Building enterprise ERP software at **CDS SOFT** — `.NET`, `C#`, `Delphi`, `SQL Server`
-- Studying **Python Application Development** at IES Augusto González Linares
 - Always shipping, always learning
 
 <br/>
